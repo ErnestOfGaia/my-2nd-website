@@ -5,26 +5,26 @@
 
   // Function to update the theme
   const updateTheme = (theme) => {
+    if (!['dark', 'light'].includes(theme)) return; // Ensure valid themes
     console.log(`Setting theme to: ${theme}`); // Debugging output
-    body.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-    themeToggle.textContent = theme === 'dark' ? '🌞' : '🌙';
-    console.log(`Current background-color:`, getComputedStyle(body).backgroundColor); // Debugging current background
+    body.setAttribute('data-theme', theme); // Apply theme as a data attribute
+    localStorage.setItem('theme', theme); // Save theme to localStorage
+    themeToggle.textContent = theme === 'dark' ? '🌞' : '🌙'; // Update toggle button text
   };
 
-  // Initialize theme on page load
+  // Function to initialize theme on page load
   const initializeTheme = () => {
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    updateTheme(savedTheme);
+    const savedTheme = localStorage.getItem('theme') || 'dark'; // Default to dark theme
+    updateTheme(savedTheme); // Apply saved theme
   };
 
-  // Event listener for theme toggle
+  // Event listener for theme toggle button
   themeToggle.addEventListener('click', () => {
     const currentTheme = body.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    updateTheme(newTheme);
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark'; // Toggle theme
+    updateTheme(newTheme); // Apply the new theme
   });
 
-  // Run initialization
+  // Run initialization when DOM content is loaded
   document.addEventListener('DOMContentLoaded', initializeTheme);
 })();

@@ -1,4 +1,21 @@
-html {
-  height: 100%;
-  width: 100%;
+:root {
+  --background-color: #d2b48c; /* Light mode background */
+  --text-color: #000000;       /* Light mode text */
+  --link-color: #007bff;       /* Light mode links */
+}
+
+[data-theme="dark"] {
+  --background-color: #121212; /* Dark mode background */
+  --text-color: #ffffff;       /* Dark mode text */
+  --link-color: #bb86fc;       /* Dark mode links */
+}
+
+body {
+  background-color: var(--background-color); /* Use the theme variable */
+  color: var(--text-color);                 /* Use the theme variable */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+a {
+  color: var(--link-color); /* Use the theme variable */
 }

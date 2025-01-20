@@ -4,7 +4,11 @@
   --link-color: #007bff;       /* Light mode links */
 }
 
-[data-theme="dark"] {
+body[data-theme="light"] {
+  background-color: var(--background-color) !important;
+}
+body [data-theme="dark"] {
+  background-color: var(--background-color) !important;
   --background-color: #121212; /* Dark mode background */
   --text-color: #ffffff;       /* Dark mode text */
   --link-color: #bb86fc;       /* Dark mode links */

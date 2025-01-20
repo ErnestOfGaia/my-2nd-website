@@ -1,7 +1,7 @@
 // Wrap everything in an IIFE to prevent polluting the global scope
 (() => {
-  const themeToggle = document.getElementById('theme-toggle');
-  const body = document.body;
+  const themeToggle = document.getElementById('theme-toggle');  // Button for toggling
+  const body = document.body;  // Body element for applying theme
 
   // Function to update the theme
   const updateTheme = (theme) => {
@@ -14,7 +14,7 @@
 
   // Function to initialize theme on page load
   const initializeTheme = () => {
-    const savedTheme = localStorage.getItem('theme') || 'dark'; // Default to dark theme
+    const savedTheme = localStorage.getItem('theme') || 'light'; // Default to light theme
     updateTheme(savedTheme); // Apply saved theme
   };
 

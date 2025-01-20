@@ -5,9 +5,11 @@
 
   // Function to update the theme
   const updateTheme = (theme) => {
+    console.log(`Setting theme to: ${theme}`); // Debugging output
     body.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
     themeToggle.textContent = theme === 'dark' ? '🌞' : '🌙';
+    console.log(`Current background-color:`, getComputedStyle(body).backgroundColor); // Debugging current background
   };
 
   // Initialize theme on page load

@@ -1,114 +1,180 @@
-                                <!DOCTYPE html>
-                                <html lang="en">
-                                <head>
-                                    <meta charset="UTF-8">
-                                    <meta name="viewport" content="width=device-width, initial-scale=1">
-                                    
-                                    <link rel="stylesheet" href="styles.css">
-                                    <title>Ernest Edu-AiGency</title>
-                                </head>
-                                <body data-theme="light" style="background-color: var(--background-color);">>
-                                    <!-- Navigation Bar -->
-                                    <nav class="container-fluid">
-                                        <ul>
-                                            <li><strong>Ernest Edu-AiGency</strong></li>
-                                        </ul>
-                                        <ul>
-                                            <li><a href="#about">About</a></li>
-                                            <li><a href="#portfolio">Portfolio</a></li>
-                                            <li><a href="#blog-updates">Blog</a></li>
-                                            <li><a href="#get-started" role="button">Get Started</a></li>
-                                            <li>
-                                                <!-- Dark Mode Toggle -->
-                                                <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
-                                            </li>
-                                        </ul>
-                                    </nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Website</title>
+  <style>
+    /* Navbar Styling */
+    nav {
+      position: fixed; /* Keeps the navbar fixed at the top */
+      top: 0;
+      left: 0;
+      width: 100%; /* Full width of the viewport */
+      background-color: #007bff;
+      color: #fff;
+      z-index: 1000; /* Ensures the navbar is above other content */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
 
-                                    <!-- Main Content -->
-                                    <main class="container">
-                                        <!-- About Section -->
-                                        <div class="grid" id="about">
-                                            <section>
-                                                <hgroup>
-                                                    <h2>About</h2>
-                                                    <h3>Discover Ernest Edu-AiGency</h3>
-                                                </hgroup>
-                                                <p>The Ernest Edu-AiGency is dedicated to teaching AI and Blockchain technology in an accessible and engaging way. Join us to start your learning journey today!</p>
-                                            </section>
-                                        </div>
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0;
+      padding: 10px 20px; /* Padding inside the navbar */
+    }
 
-                                        <!-- Portfolio Section -->
-                                        <div class="grid" id="portfolio">
-                                            <section>
-                                                <hgroup>
-                                                    <h2>Portfolio</h2>
-                                                    <h3>Explore Our YouTube Playlists</h3>
-                                                </hgroup>
-                                                <figure>
-                                                    <img src="https://yt3.googleusercontent.com/lB6cq0h_sJQxCDtbKupQFZeAZh2p1Zf0rGmUjKSOxCKVF7742Zw8y0gLJslR0-4TLmebxmXeKA=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj" alt="Ernest Of Gaia YouTube Banner" style="width:100%; border-radius:10px;">
-                                                    <figcaption>Follow our playlists to learn AI and Blockchain:</figcaption>
-                                                    <ul>
-                                                        <li><a href="https://www.youtube.com/playlist?list=PLMVqmqzoPa-jiB1oO3iw38EecdcnJjWBE" target="_blank">Ernest Of Gaia Creations</a></li>
-                                                        <li><a href="https://www.youtube.com/playlist?list=PLMVqmqzoPa-gDKvYQpEc8YcD5e0hKtSU-" target="_blank">AIAgents.Box Meetings</a></li>
-                                                        <li><a href="https://www.youtube.com/playlist?list=PLMVqmqzoPa-jhwTVokm4Y29U77t4HEaG8" target="_blank">#ErnestGoesToAI</a></li>
-                                                        <li><a href="https://www.youtube.com/playlist?list=PLMVqmqzoPa-hPxTFRD15A6I-nECJop4RN" target="_blank">#ErnestGoesToBlockchain</a></li>
-                                                    </ul>
-                                                </figure>
-                                            </section>
-                                        </div>
+    nav ul li {
+      margin: 0 15px;
+    }
 
-                                        <!-- Blog Section -->
-                                        <div class="grid" id="blog-updates">
-                                            <section>
-                                                <hgroup>
-                                                    <h2>Blog</h2>
-                                                    <h3>Latest Updates from Paragraph.xyz</h3>
-                                                </hgroup>
-                                                <iframe width="100%" height="600" src="https://paragraph.xyz/@mambodao.eth" frameborder="0"></iframe>
-                                            </section>
-                                        </div>
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
 
-                                        <!-- Get Started Section -->
-                                        <div class="grid" id="get-started">
-                                            <section>
-                                                <hgroup>
-                                                    <h2>Get Started</h2>
-                                                    <h3>Join Our E-Commerce Platform</h3>
-                                                </hgroup>
-                                                <p>Support and grow your AI and Blockchain journey with our e-commerce platform.</p>
-                                                <a href="https://sepolia.juicebox.money/v2/p/92" target="_blank" role="button">Visit E-Commerce Site</a>
-                                            </section>
-                                        </div>
-                                    </main>
+    nav ul li a:hover {
+      color: #ffd700; /* Hover color */
+    }
 
-                                    <!-- Contact Form Section -->
-                                    <section aria-label="Subscribe example">
-                                        <div class="container">
-                                            <article>
-                                                <hgroup>
-                                                    <h2>Contact Us</h2>
-                                                    <h3>We’d love to hear from you!</h3>
-                                                </hgroup>
-                                                <form class="grid">
-                                                    <input type="text" id="firstname" name="firstname" placeholder="Your Name" aria-label="Your Name" required>
-                                                    <input type="email" id="email" name="email" placeholder="Your Email" aria-label="Your Email" required>
-                                                    <button type="submit" onclick="event.preventDefault()">Send</button>
-                                                </form>
-                                            </article>
-                                        </div>
-                                    </section>
+    /* General Reset */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+      padding-top: 60px; /* Extra padding to account for fixed navbar */
+    }
 
-                                    <!-- Footer -->
-                                    <footer class="container">
-                                        <small>
-                                            <a href="#about">About</a> •
-                                            <a href="#portfolio">Portfolio</a> •
-                                            <a href="#blog-updates">Blog</a> •
-                                            <a href="#get-started">Get Started</a>
-                                        </small>
-                                    </footer>
+    /* Main Content Styling */
+    main.container {
+      max-width: 1200px;
+      margin: 0 auto; /* Centers the content */
+      background-color: #fff;
+      padding: 20px; /* Inner padding for the main content */
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-                                    <script src="script.js"></script>
-                                </body>
-                                </html>
+    /* Footer Styling */
+    footer {
+      text-align: center;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Fixed Navbar -->
+  <nav>
+    <ul>
+      <li><strong>Your Website</strong></li>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Get Started</a></li>
+      </ul>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+    <main class="container">
+      <!-- About Section -->
+      <div class="grid" id="about">
+          <section>
+              <hgroup>
+                  <h2>About</h2>
+                  <h3>Discover Ernest Edu-AiGency</h3>
+              </hgroup>
+              <p>The Ernest Edu-AiGency is dedicated to teaching AI and Blockchain technology in an accessible and engaging way. Join us to start your learning journey today!</p>
+          </section>
+      </div>
+
+    
+      <!-- Portfolio Section -->
+      <div class="grid" id="portfolio">
+          <section>
+              <hgroup>
+                  <h2>Portfolio</h2>
+                  <h3>Explore Our YouTube Playlists</h3>
+              </hgroup>
+              <figure>
+                  <img src="https://yt3.googleusercontent.com/lB6cq0h_sJQxCDtbKupQFZeAZh2p1Zf0rGmUjKSOxCKVF7742Zw8y0gLJslR0-4TLmebxmXeKA=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj" alt="Ernest Of Gaia YouTube Banner" style="width:100%; border-radius:10px;">
+                  <figcaption>Follow our playlists to learn AI and Blockchain:</figcaption>
+                  <ul>
+                      <li><a href="https://www.youtube.com/playlist?list=PLMVqmqzoPa-jiB1oO3iw38EecdcnJjWBE" target="_blank">Ernest Of Gaia Creations</a></li>
+                      <li><a href="https://www.youtube.com/playlist?list=PLMVqmqzoPa-gDKvYQpEc8YcD5e0hKtSU-" target="_blank">AIAgents.Box Meetings</a></li>
+                      <li><a href="https://www.youtube.com/playlist?list=PLMVqmqzoPa-jhwTVokm4Y29U77t4HEaG8" target="_blank">#ErnestGoesToAI</a></li>
+                      <li><a href="https://www.youtube.com/playlist?list=PLMVqmqzoPa-hPxTFRD15A6I-nECJop4RN" target="_blank">#ErnestGoesToBlockchain</a></li>
+                  </ul>
+              </figure>
+          </section>
+      </div>
+
+    
+      <!-- Blog Section -->
+      <div class="grid" id="blog-updates">
+          <section>
+              <hgroup>
+                  <h2>Blog</h2>
+                  <h3>Latest Updates from Paragraph.xyz</h3>
+              </hgroup>
+              <iframe width="100%" height="600" src="https://paragraph.xyz/@mambodao.eth" frameborder="0"></iframe>
+          </section>
+      </div>
+
+      <!-- Get Started Section -->
+      <div class="grid" id="get-started">
+          <section>
+              <hgroup>
+                  <h2>Get Started</h2>
+                  <h3>Join Our E-Commerce Platform</h3>
+              </hgroup>
+              <p>Support and grow your AI and Blockchain journey with our e-commerce platform.</p>
+              <a href="https://sepolia.juicebox.money/v2/p/92" target="_blank" role="button">Visit E-Commerce Site</a>
+          </section>
+      </div>
+  </main>
+  <!-- Contact Form Section -->
+  <section aria-label="Subscribe example">
+      <div class="container">
+          <article>
+              <hgroup>
+                  <h2>Contact Us</h2>
+                  <h3>We’d love to hear from you!</h3>
+              </hgroup>
+              <form class="grid">
+                  <input type="text" id="firstname" name="firstname" placeholder="Your Name" aria-label="Your Name" required>
+                  <input type="email" id="email" name="email" placeholder="Your Email" aria-label="Your Email" required>
+                  <button type="submit" onclick="event.preventDefault()">Send</button>
+              </form>
+          </article>
+      </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <small>
+      <a href="#about">About</a> • <a href="#portfolio">Portfolio</a> • <a href="#blog">Blog</a>
+    </small>
+  </footer>
+</body>
+</html>
